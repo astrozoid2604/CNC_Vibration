@@ -66,9 +66,9 @@ The step-by-step EDA processes are captured in this Jupyter Notebook located at 
 In order to gauge the performance of DGAN's synthetic data, we need to equip ourself with appropriate evaluation metrics. By doing this, we can reliably tune our hyperparameter settings. The prevalent metrics used can be seen in this Evaluation Metrics PPT located at `docs/DGAN_literature_review/Gen-AI_Evaluation_Metrics.pptx`.
 
 ## DGAN Training
-Having done all the literature review steps (i.e. reading research papers & performing EDA practice on CNC vibration data), we are ready to train and tune our DGAN model on real-life RBCC vibration data. Detailed step-by-step instructions on how to get RBCC vibration data and how to run DGAN model can be checked from README.md located at `experiments/loss_function_scripts/README.md`. 
+Having done all the literature review steps (i.e. reading research papers & performing EDA practice on CNC vibration data), we are ready to train and tune our DGAN model on real-life RBCC vibration data. Detailed step-by-step instructions on how to get RBCC vibration data and how to run DGAN model can be checked from README.md located at `experiments/scripts/README.md`. 
 
-Composition of `experiments/loss_function_scripts/` directory:
+Composition of `experiments/scripts/` directory:
 - The training script is all consolidated in 1 Python file (except for evaluation metric computation which will be covered later), namely, `train_DGAN.py`. 
 - `DGAN_debug.ipynb` acts as a sandbox in which all isolated debugging attempts or try-outs can be performed safely without affecting the integrity & functionatlity of our main training file as mentioned above.
 - `df_minmax.csv` stores the minimum and maximum values of each vibration axes, namely, X axis, Y axis, and Z axis. During data wrangling, we have to perform data scaling in the range of [-1, 1] for each of aforelisted axes. After generating synthetic data, if we want to retrieve back the data in original scaling, we can make use of the minimum and maximum values stored in this CSV document.
